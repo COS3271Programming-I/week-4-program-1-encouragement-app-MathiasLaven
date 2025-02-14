@@ -1,0 +1,9 @@
+Hello!
+
+How old are you? 
+>>16
+How are you doing today? Please enter one of "good", "fine", or "bad". 
+>>good
+
+Great! :) 
+Hope you have an excellent day!

@@ -1,0 +1,54 @@
+package my_project;
+import java.util.Scanner;
+
+public class MyClass {   
+    static Scanner userinput = new Scanner(System.in); 
+    public static void main(String[] args) {
+    	System.out.println("Hello!");
+        System.out.println("");
+    	
+        System.out.print("How old are you? \n>>");
+        int age = Integer.parseInt(userinput.nextLine());
+        System.out.print("How are you doing today? Please enter one of \"good\", \"fine\", or \"bad\". \n>>");
+        String condition = userinput.nextLine();
+        
+        System.out.println("");
+        
+        //https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#equalsIgnoreCase-java.lang.String-
+        if (condition.equalsIgnoreCase("good")) {
+        	
+        	if (age <= 18) {
+        		System.out.println("Great! :) \nHope you have an excellent day!");
+        	} else if (age <= 65) {
+        		System.out.println("That's good to hear. \nI hope that continues for you!");
+        	} else {
+        		System.out.println("That's the spirit! \n Remember to cherish everything God has provided!");
+        	}
+        }
+        else if (condition.equalsIgnoreCase("fine")) {
+        	
+        	if (age <= 18) {
+        		System.out.println("That's good. Don't forget, with the right attitude, nothing can stop you!");
+        	} else if (age <= 65) {
+        		System.out.println("Nice! \nKeep that positive outlook, and I'm sure everything will turn out alright.");
+        	} else {
+        		System.out.println("Excellent. \nRemember to keep living for God's glory!");
+        	}
+        	
+        }
+        else if (condition.equalsIgnoreCase("bad")) {
+        	
+        	if (age <= 18) {
+        		System.out.println("Oh no, I'm sorry :( \nRemember to look on the bright side, and I hope things get better for you!");
+        	} else if (age <= 65) {
+        		System.out.println("Unfortunate. \nDon't forget, though, things are only what you make of it; keep pushing!");
+        	} else {
+        		System.out.println("I'm sorry to hear that. \nHope things look up for you soon. Praying for you!");
+        	}
+        	
+        }
+        else {
+        	System.out.println("I'm sorry, I couldn't understand what you said. \nRegardless, I hope you remember to maintain a positive attitude and don't let the world keep you down!");
+        }
+    }
+}
